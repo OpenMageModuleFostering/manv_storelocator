@@ -8,7 +8,7 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 				parent::__construct();
 				$this->setId("storelocatorGrid");
 				$this->setDefaultSort("id");
-				$this->setDefaultDir("ASC");
+				$this->setDefaultDir("DESC");
 				$this->setSaveParametersInSession(true);
 		}
 
@@ -32,10 +32,6 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 				"header" => Mage::helper("storelocator")->__("Name"),
 				"index" => "name",
 				));
-				$this->addColumn("address", array(
-				"header" => Mage::helper("storelocator")->__("Address"),
-				"index" => "address",
-				));
 				$this->addColumn("zipcode", array(
 				"header" => Mage::helper("storelocator")->__("Zipcode"),
 				"index" => "zipcode",
@@ -57,7 +53,7 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 				"index" => "fax",
 				));
 				$this->addColumn("store_url", array(
-				"header" => Mage::helper("storelocator")->__("Store_url"),
+				"header" => Mage::helper("storelocator")->__("Store Url"),
 				"index" => "store_url",
 				));
 				$this->addColumn("email", array(
@@ -67,6 +63,10 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 				$this->addColumn("tradinghours", array(
 				"header" => Mage::helper("storelocator")->__("Trading Hours"),
 				"index" => "tradinghours",
+				));
+				$this->addColumn("radius", array(
+				"header" => Mage::helper("storelocator")->__("Radius"),
+				"index" => "radius",
 				));
 				$this->addColumn("lat", array(
 				"header" => Mage::helper("storelocator")->__("Latitude"),
@@ -83,10 +83,6 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 						'options'=>Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray15(),				
 						));
 						
-				$this->addColumn("radius", array(
-				"header" => Mage::helper("storelocator")->__("Radius"),
-				"index" => "radius",
-				));
 			$this->addExportType('*/*/exportCsv', Mage::helper('sales')->__('CSV')); 
 			$this->addExportType('*/*/exportExcel', Mage::helper('sales')->__('Excel'));
 
@@ -117,7 +113,7 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 		{
             $data_array=array(); 
 			$data_array[0]='Enable';
-			$data_array[1]='Disable';
+			$data_array[1]='Disasble';
             return($data_array);
 		}
 		static public function getValueArray15()

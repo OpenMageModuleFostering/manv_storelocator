@@ -10,11 +10,13 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_
 
 				
 						$fieldset->addField("name", "text", array(
-						"label" => Mage::helper("storelocator")->__("Name"),
+						"label" => Mage::helper("storelocator")->__("Name"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "name",
 						));
 					
-						$fieldset->addField("address", "text", array(
+						$fieldset->addField("address", "textarea", array(
 						"label" => Mage::helper("storelocator")->__("Address"),
 						"name" => "address",
 						));
@@ -50,7 +52,7 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_
 						));
 					
 						$fieldset->addField("store_url", "text", array(
-						"label" => Mage::helper("storelocator")->__("Store_url"),
+						"label" => Mage::helper("storelocator")->__("Store Url"),
 						"name" => "store_url",
 						));
 					
@@ -63,6 +65,13 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_
 						"label" => Mage::helper("storelocator")->__("Trading Hours"),
 						"name" => "tradinghours",
 						));
+					
+						$fieldset->addField("radius", "text", array(
+						"label" => Mage::helper("storelocator")->__("Radius"),					
+						"class" => "required-entry",
+						"required" => true,
+						"name" => "radius",
+						));
 									
 						$fieldset->addField('image', 'image', array(
 						'label' => Mage::helper('storelocator')->__('Store Image'),
@@ -70,12 +79,16 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_
 						'note' => '(*.jpg, *.png, *.gif)',
 						));
 						$fieldset->addField("lat", "text", array(
-						"label" => Mage::helper("storelocator")->__("Latitude"),
+						"label" => Mage::helper("storelocator")->__("Latitude"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "lat",
 						));
 					
 						$fieldset->addField("longt", "text", array(
-						"label" => Mage::helper("storelocator")->__("Longitude"),
+						"label" => Mage::helper("storelocator")->__("Longitude"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "longt",
 						));
 									
@@ -84,11 +97,6 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_
 						'values'   => Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getValueArray15(),
 						'name' => 'status',
 						));
-						$fieldset->addField("radius", "text", array(
-						"label" => Mage::helper("storelocator")->__("Radius"),
-						"name" => "radius",
-						));
-					
 
 				if (Mage::getSingleton("adminhtml/session")->getStorelocatorData())
 				{
