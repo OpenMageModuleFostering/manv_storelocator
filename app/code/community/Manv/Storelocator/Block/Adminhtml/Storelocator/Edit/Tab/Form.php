@@ -10,75 +10,85 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_
 
 				
 						$fieldset->addField("name", "text", array(
-						"label" => Mage::helper("storelocator")->__("name"),
+						"label" => Mage::helper("storelocator")->__("Name"),
 						"name" => "name",
 						));
 					
 						$fieldset->addField("address", "text", array(
-						"label" => Mage::helper("storelocator")->__("address"),
+						"label" => Mage::helper("storelocator")->__("Address"),
 						"name" => "address",
 						));
 					
 						$fieldset->addField("zipcode", "text", array(
-						"label" => Mage::helper("storelocator")->__("zipcode"),
+						"label" => Mage::helper("storelocator")->__("Zipcode"),
 						"name" => "zipcode",
 						));
 					
 						$fieldset->addField("city", "text", array(
-						"label" => Mage::helper("storelocator")->__("city"),
+						"label" => Mage::helper("storelocator")->__("City"),
 						"name" => "city",
 						));
 					
 						$fieldset->addField("country_id", "text", array(
-						"label" => Mage::helper("storelocator")->__("country_id"),
+						"label" => Mage::helper("storelocator")->__("Country"),
 						"name" => "country_id",
 						));
 					
 						$fieldset->addField("phone", "text", array(
-						"label" => Mage::helper("storelocator")->__("phone"),
+						"label" => Mage::helper("storelocator")->__("Phone"),
 						"name" => "phone",
 						));
 					
 						$fieldset->addField("fax", "text", array(
-						"label" => Mage::helper("storelocator")->__("fax"),
+						"label" => Mage::helper("storelocator")->__("Fax"),
 						"name" => "fax",
 						));
 					
-						$fieldset->addField("description", "text", array(
-						"label" => Mage::helper("storelocator")->__("description"),
+						$fieldset->addField("description", "textarea", array(
+						"label" => Mage::helper("storelocator")->__("Description"),
 						"name" => "description",
 						));
 					
 						$fieldset->addField("store_url", "text", array(
-						"label" => Mage::helper("storelocator")->__("store_url"),
+						"label" => Mage::helper("storelocator")->__("Store_url"),
 						"name" => "store_url",
+						));
+					
+						$fieldset->addField("email", "text", array(
+						"label" => Mage::helper("storelocator")->__("Email"),
+						"name" => "email",
+						));
+					
+						$fieldset->addField("tradinghours", "text", array(
+						"label" => Mage::helper("storelocator")->__("Trading Hours"),
+						"name" => "tradinghours",
 						));
 									
 						$fieldset->addField('image', 'image', array(
-						'label' => Mage::helper('storelocator')->__('image'),
+						'label' => Mage::helper('storelocator')->__('Store Image'),
 						'name' => 'image',
-						'note' => '(*.jpg, *.png, *.gif)',
-						));				
-						$fieldset->addField('marker', 'image', array(
-						'label' => Mage::helper('storelocator')->__('marker'),
-						'name' => 'marker',
 						'note' => '(*.jpg, *.png, *.gif)',
 						));
 						$fieldset->addField("lat", "text", array(
-						"label" => Mage::helper("storelocator")->__("lat"),
+						"label" => Mage::helper("storelocator")->__("Latitude"),
 						"name" => "lat",
 						));
 					
 						$fieldset->addField("longt", "text", array(
-						"label" => Mage::helper("storelocator")->__("longt"),
+						"label" => Mage::helper("storelocator")->__("Longitude"),
 						"name" => "longt",
 						));
 									
 						 $fieldset->addField('status', 'select', array(
-						'label'     => Mage::helper('storelocator')->__('status'),
-						'values'   => Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getValueArray13(),
+						'label'     => Mage::helper('storelocator')->__('Status'),
+						'values'   => Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getValueArray15(),
 						'name' => 'status',
 						));
+						$fieldset->addField("radius", "text", array(
+						"label" => Mage::helper("storelocator")->__("Radius"),
+						"name" => "radius",
+						));
+					
 
 				if (Mage::getSingleton("adminhtml/session")->getStorelocatorData())
 				{

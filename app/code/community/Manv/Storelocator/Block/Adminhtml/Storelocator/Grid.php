@@ -29,56 +29,64 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 				));
                 
 				$this->addColumn("name", array(
-				"header" => Mage::helper("storelocator")->__("name"),
+				"header" => Mage::helper("storelocator")->__("Name"),
 				"index" => "name",
 				));
 				$this->addColumn("address", array(
-				"header" => Mage::helper("storelocator")->__("address"),
+				"header" => Mage::helper("storelocator")->__("Address"),
 				"index" => "address",
 				));
 				$this->addColumn("zipcode", array(
-				"header" => Mage::helper("storelocator")->__("zipcode"),
+				"header" => Mage::helper("storelocator")->__("Zipcode"),
 				"index" => "zipcode",
 				));
 				$this->addColumn("city", array(
-				"header" => Mage::helper("storelocator")->__("city"),
+				"header" => Mage::helper("storelocator")->__("City"),
 				"index" => "city",
 				));
 				$this->addColumn("country_id", array(
-				"header" => Mage::helper("storelocator")->__("country_id"),
+				"header" => Mage::helper("storelocator")->__("Country"),
 				"index" => "country_id",
 				));
 				$this->addColumn("phone", array(
-				"header" => Mage::helper("storelocator")->__("phone"),
+				"header" => Mage::helper("storelocator")->__("Phone"),
 				"index" => "phone",
 				));
 				$this->addColumn("fax", array(
-				"header" => Mage::helper("storelocator")->__("fax"),
+				"header" => Mage::helper("storelocator")->__("Fax"),
 				"index" => "fax",
 				));
-				$this->addColumn("description", array(
-				"header" => Mage::helper("storelocator")->__("description"),
-				"index" => "description",
-				));
 				$this->addColumn("store_url", array(
-				"header" => Mage::helper("storelocator")->__("store_url"),
+				"header" => Mage::helper("storelocator")->__("Store_url"),
 				"index" => "store_url",
 				));
+				$this->addColumn("email", array(
+				"header" => Mage::helper("storelocator")->__("Email"),
+				"index" => "email",
+				));
+				$this->addColumn("tradinghours", array(
+				"header" => Mage::helper("storelocator")->__("Trading Hours"),
+				"index" => "tradinghours",
+				));
 				$this->addColumn("lat", array(
-				"header" => Mage::helper("storelocator")->__("lat"),
+				"header" => Mage::helper("storelocator")->__("Latitude"),
 				"index" => "lat",
 				));
 				$this->addColumn("longt", array(
-				"header" => Mage::helper("storelocator")->__("longt"),
+				"header" => Mage::helper("storelocator")->__("Longitude"),
 				"index" => "longt",
 				));
 						$this->addColumn('status', array(
-						'header' => Mage::helper('storelocator')->__('status'),
+						'header' => Mage::helper('storelocator')->__('Status'),
 						'index' => 'status',
 						'type' => 'options',
-						'options'=>Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray13(),				
+						'options'=>Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray15(),				
 						));
 						
+				$this->addColumn("radius", array(
+				"header" => Mage::helper("storelocator")->__("Radius"),
+				"index" => "radius",
+				));
 			$this->addExportType('*/*/exportCsv', Mage::helper('sales')->__('CSV')); 
 			$this->addExportType('*/*/exportExcel', Mage::helper('sales')->__('Excel'));
 
@@ -105,17 +113,17 @@ class Manv_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml
 			return $this;
 		}
 			
-		static public function getOptionArray13()
+		static public function getOptionArray15()
 		{
             $data_array=array(); 
 			$data_array[0]='Enable';
 			$data_array[1]='Disable';
             return($data_array);
 		}
-		static public function getValueArray13()
+		static public function getValueArray15()
 		{
             $data_array=array();
-			foreach(Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray13() as $k=>$v){
+			foreach(Manv_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray15() as $k=>$v){
                $data_array[]=array('value'=>$k,'label'=>$v);		
 			}
             return($data_array);

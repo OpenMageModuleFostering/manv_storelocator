@@ -3,7 +3,7 @@ class Manv_Storelocator_IndexController extends Mage_Core_Controller_Front_Actio
     public function IndexAction() {
       
 	  $this->loadLayout();   
-	  $this->getLayout()->getBlock("head")->setTitle($this->__("StoreLocator"));
+	  $this->getLayout()->getBlock("head")->setTitle($this->__("Storelocator"));
 	        $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
       $breadcrumbs->addCrumb("home", array(
                 "label" => $this->__("Home Page"),
@@ -12,8 +12,8 @@ class Manv_Storelocator_IndexController extends Mage_Core_Controller_Front_Actio
 		   ));
 
       $breadcrumbs->addCrumb("storelocator", array(
-                "label" => $this->__("StoreLocator"),
-                "title" => $this->__("StoreLocator")
+                "label" => $this->__("Storelocator"),
+                "title" => $this->__("Storelocator")
 		   ));
 
       $this->renderLayout(); 
