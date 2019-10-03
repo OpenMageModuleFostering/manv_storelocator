@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Manv_storelocator",
+    "name": "OpenMageModuleFostering\/Manv_storelocator",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "Store Locator extension allows you to show store location. Store locator increses tour sales. Store locator.",
     "authors": [
-    {
-        "name": "Manvendra Sharma",
-        "email": "sharmamanvendra6@gmail.com"
-    }
-],
+        {
+            "name": "Manvendra Sharma",
+            "email": "sharmamanvendra6@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
